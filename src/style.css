@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(213, 208, 208);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.container h1 {
+  padding: 20px;
+}
+
+.wrapper {
+  width: 80%;
+  height: 560px;
+  background: #fff;
+}
+
+.refesh {
+  padding-left: 20px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.refesh h3 {
+  font-size: 20px;
+}
+
+.refesh button {
+  margin-left: 100px;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  margin-left: 40px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  border: solid #000 2px;
+  width: 250px;
+  height: 100%;
+  justify-content: flex-start;
+  margin-right: 200px; 
+}
+
+.InputForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.InputForm h3 {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#inputName,
+#inputScore {
+  padding: 0 5px;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 30px;
+}
+
+button {
+  margin-top: 15px;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+}

@@ -1,13 +1,18 @@
-import _ from 'lodash';
+import './styles.css';
 
-function component() {
-  const element = document.createElement('div');
+const posts = [
+  { player: 'vincent', score: 200 },
+  { player: 'Monica', score: 150 },
+  { player: 'Stephen', score: 100 },
+]
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const table = document.getElementById('table')
 
-  return element;
-}
-
-document.body.appendChild(component());
-
+posts.forEach((post) => {
+  table.innerHTML += ` 
+          <tr>  
+           <td>${post.player}</td>
+           <td>${post.score}</td>   
+          </tr> 
+        `
+})
