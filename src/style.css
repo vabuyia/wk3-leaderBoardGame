@@ -65,8 +65,8 @@ button {
   border: solid #000 2px;
   width: 250px;
   height: 100%;
+  margin-right: 200px;
   justify-content: flex-start;
-  margin-right: 200px; 
 }
 
 .InputForm {
