@@ -2,7 +2,7 @@ const refreshBtn = document.querySelector('.refreshBtn');
 
 const refresh = () => {
   window.location.reload();
-  return true;
+  return false;
 };
 
 export { refresh, refreshBtn };
