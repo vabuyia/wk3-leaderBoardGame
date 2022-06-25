@@ -1,4 +1,5 @@
-import './style.css';
+/* eslint-disable */
+import './style.css'
 import getData from '../modules/addscore.js';
 import { refreshBtn, refresh } from '../modules/refresh.js';
 
@@ -12,7 +13,8 @@ form.addEventListener('submit', (e) => {
   const nameVal = nameInput.value;
   const scoreVal = scoreInput.value;
   const sendGame = async () => {
-    const obtain = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ukaI3OuXrr2bR6UArEV7/scores',
+    const obtain = await fetch(
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ukaI3OuXrr2bR6UArEV7/scores',
       {
         method: 'POST',
         body: JSON.stringify({
@@ -22,14 +24,14 @@ form.addEventListener('submit', (e) => {
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
-      },
-    );
-    
+      }
+    )
+
     const postObj = await obtain.json();
     postResult.innerHTML = postObj.result;
   };
   sendGame();
   e.preventDefault();
-});
+})
 getData();
 refreshBtn.addEventListener('click', refresh);
