@@ -24,6 +24,7 @@ form.addEventListener('submit', (e) => {
         },
       },
     );
+    
     const postObj = await obtain.json();
     postResult.innerHTML = postObj.result;
   };
