@@ -16,12 +16,9 @@ Use async and await JavaScript features to consume the API.
 ## Built With
 
 - Major languages
-  HTML
-  CSS
+  HTML/CSS
   Javascript
   Webpack
-
-
 
 Live DEMO[]
 
