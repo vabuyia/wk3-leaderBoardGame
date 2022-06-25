@@ -23,7 +23,7 @@ form.addEventListener('submit', (e) => {
           'Content-type': 'application/json; charset=UTF-8',
         },
       }
-    )
+    );
     const postObj = await obtain.json();
     postResult.innerHTML = postObj.result;
   };

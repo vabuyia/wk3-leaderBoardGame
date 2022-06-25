@@ -1,15 +1,14 @@
-import displaygames from './displaygames.js'
+import displaygames from './displaygames.js';
 
-//Fetch data from API
 const getData = async () => {
   const url =
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ukaI3OuXrr2bR6UArEV7/scores'
-  const request = new Request(url)
-  const results = await fetch(request)
-  const gameObj = await results.json()
-  const { result } = gameObj
+  const request = new Request(url);
+  const results = await fetch(request);
+  const gameObj = await results.json();
+  const { result } = gameObj;
 
-  displaygames(result)
-}
+  displaygames(result);
+};
 
-export default getData
+export default getData;
