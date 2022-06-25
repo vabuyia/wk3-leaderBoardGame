@@ -1,4 +1,4 @@
-## Leaderboard: hit the API
+## Leaderboard: Final Touches
 
 set up a JavaScript project for the Leaderboard list app,
 
@@ -8,10 +8,7 @@ Working on the send and receiving data from/to the Leaderboard API.
 
 ## Project requirements
 
-.Create a new game with the name of your choice by using the API.
-.Implement the "Refresh" button (receiving data from the API and parsing the JSON).
-..Implement the form "Submit" button (sending data to the API).
-Use async and await JavaScript features to consume the API.
+. Adding the styles needed to make it look great.
 
 ## Built With
 
