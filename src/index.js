@@ -22,7 +22,7 @@ form.addEventListener('submit', (e) => {
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
-      }
+      },
     );
     const postObj = await obtain.json();
     postResult.innerHTML = postObj.result;
@@ -30,6 +30,5 @@ form.addEventListener('submit', (e) => {
   sendGame();
   e.preventDefault();
 });
-
 getData();
 refreshBtn.addEventListener('click', refresh);
