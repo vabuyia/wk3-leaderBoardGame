@@ -1,18 +1,36 @@
+/* eslint-disable */
 import './style.css';
+import getData from '../modules/addscore.js';
+import { refreshBtn, refresh } from '../modules/refresh.js';
 
-const posts = [
-  { player: 'vincent', score: 200 },
-  { player: 'Monica', score: 150 },
-  { player: 'Stephen', score: 100 },
-];
+const nameInput = document.getElementById('name');
+const scoreInput = document.getElementById('score');
+const form = document.getElementById('form');
+const postResult = document.getElementById('res');
 
-const table = document.getElementById('table');
-
-posts.forEach((post) => {
-  table.innerHTML += ` 
-          <tr>  
-           <td>${post.player}</td>
-           <td>${post.score}</td>   
-          </tr> 
-        `;
+// Add event listener
+form.addEventListener('submit', (e) => {
+  const nameVal = nameInput.value;
+  const scoreVal = scoreInput.value;
+  const sendGame = async () => {
+    const obtain = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ukaI3OuXrr2bR6UArEV7/scores',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          user: nameVal,
+          score: scoreVal,
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      }
+    );
+    const postObj = await obtain.json();
+    postResult.innerHTML = postObj.result;
+  };
+  sendGame();
+  e.preventDefault();
 });
+
+getData();
+refreshBtn.addEventListener('click', refresh);
