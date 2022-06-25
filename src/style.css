@@ -1,91 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap');
+
 * {
-  padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
 }
 
-body {
-  background: rgb(213, 208, 208);
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5625rem 1rem;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
+h1,
+h2,
+.refresh-btn,
+.eachScore,
+.inputs {
+  font-family: 'Poppins', sans-serif;
+}
+
+#main {
+  padding: 0 3.125rem;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.25rem;
+}
+
+.leaderboard-lists,
+.toadd-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 100px;
 }
 
-.container h1 {
-  padding: 20px;
-}
-
-.wrapper {
-  width: 80%;
-  height: 560px;
-  background: #fff;
-}
-
-.refesh {
-  padding-left: 20px;
-  padding-right: 10px;
+.refresh {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40%;
+  gap: 3.125rem;
 }
 
-.refesh h3 {
-  font-size: 20px;
+.main-lists {
+  border-radius: 4px;
+  border: 2px solid #000;
+  height: 400px;
+  overflow: hidden scroll;
 }
 
-button {
-  margin-top: 15px;
-  cursor: pointer;
-  width: 60px;
-  height: 30px;
+.white-bg {
+  background-color: #fff;
 }
 
-.refesh button {
-  margin-left: 100px;
+.grey-bg {
+  background-color: #ddd;
 }
 
-.grid {
+.eachScore {
+  padding: 8px;
+  font-weight: 600;
+  color: #000;
+}
+
+.forms {
+  width: 50%;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: 40px;
-}
-
-.list {
-  display: flex;
-  flex-direction: row;
-  border: solid #000 2px;
-  width: 250px;
-  height: 100%;
-  margin-right: 200px;
-  justify-content: flex-start;
-}
-
-.InputForm {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
-.InputForm h3 {
-  font-size: 20px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+.result-post {
+  margin-bottom: 16px;
+  padding: 4px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: greenyellow;
+  background-color: #000;
 }
 
-#inputName,
-#inputScore {
-  padding: 0 5px;
-  margin-bottom: 10px;
-  width: 200px;
-  height: 30px;
+.inputs,
+.refresh-btn {
+  padding: 0.375rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+
+.submit-inputs {
+  width: 20%;
+  align-self: flex-end;
+}
+
+.refresh-btn,
+.submit-inputs {
+  box-shadow: 3px 3px #000;
+}
+
+.refresh,
+.main-lists,
+.forms,
+.add-score,
+.text-inputs {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1.25rem;
+  }
+
+  .leaderboard-lists,
+  .toadd-list {
+    width: 35%;
+  }
 }

@@ -1,15 +1,17 @@
-## Leaderboard: setup project
+## Leaderboard: hit the API
 
 set up a JavaScript project for the Leaderboard list app,
 
 ## Description
 
-set up a JavaScript project for the Leaderboard list app,
+Working on the send and receiving data from/to the Leaderboard API.
 
 ## Project requirements
 
-****Create an npm project with webpack. (If you need a refresher, check the previous project or webpack exercise).
-****Write plain HTML markup with minimum styling (just to make the layout), because you will implement styles in the following steps. 
+.Create a new game with the name of your choice by using the API.
+.Implement the "Refresh" button (receiving data from the API and parsing the JSON).
+..Implement the form "Submit" button (sending data to the API).
+Use async and await JavaScript features to consume the API.
 
 ## Built With
 
