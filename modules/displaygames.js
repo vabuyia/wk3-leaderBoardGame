@@ -1,6 +1,6 @@
 const mainList = document.getElementById('main-list');
 
-const displaygames = (games) => {
+const displayGames = (games) => {
   games.forEach((game, index) => {
     const eachDiv = document.createElement('div');
     const para = document.createElement('p');
@@ -17,4 +17,4 @@ const displaygames = (games) => {
   });
 };
 
-export default displaygames;
+export default displayGames;
